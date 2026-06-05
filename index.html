@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Song Lê Holdings · Nền tảng chuyển đổi số Thiết kế – Thi công – Bất động sản</title>
+<meta name="description" content="Từ bãi đất trống đến nhà chìa khoá trao tay trên một nền tảng. Giải pháp công nghệ trọn gói cho Song Lê Holdings — thiết kế, thi công, giám sát, vận hành, bán hàng & pháp chế.">
+
+<!-- Favicon: viên ngọc thương hiệu hiện trên tab trình duyệt -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%232FB873'/><stop offset='.5' stop-color='%235B6AD0'/><stop offset='1' stop-color='%23A557D6'/></linearGradient></defs><rect x='6' y='6' width='20' height='20' rx='6' fill='url(%23g)'/></svg>">
+<meta name="theme-color" content="#F5F4FB">
+<link rel="canonical" href="https://songleholdings.com/">
+
+<!-- Open Graph: gửi link qua Zalo / Messenger / Facebook / email sẽ hiện thẻ xem trước đẹp -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Song Lê Holdings">
+<meta property="og:url" content="https://songleholdings.com/">
+<meta property="og:title" content="Song Lê Holdings · Nền tảng chuyển đổi số Thiết kế – Thi công – Bất động sản">
+<meta property="og:description" content="Từ bãi đất trống đến nhà chìa khoá trao tay — trên một nền tảng. Giải pháp công nghệ trọn gói: thiết kế, thi công, giám sát, vận hành, bán hàng &amp; pháp chế.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Song Lê Holdings · Nền tảng chuyển đổi số">
+<meta name="twitter:description" content="Từ bãi đất trống đến nhà chìa khoá trao tay — trên một nền tảng.">
+<!-- Ảnh xem trước (tuỳ chọn): sau khi tải ảnh og-cover.png (1200×630) lên domain thì bỏ dấu comment 2 dòng dưới
+<meta property="og:image" content="https://songleholdings.com/og-cover.png">
+<meta name="twitter:image" content="https://songleholdings.com/og-cover.png"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F4FB;--surface:#FFFFFF;
+  --ink:#1B1C2E;--ink-soft:#54566F;--muted:#8C8FA6;
+  --line:rgba(30,32,70,0.10);--line-soft:rgba(30,32,70,0.06);
+  --c1:#E5484D;--c2:#F2851E;--c3:#EDB72A;--c4:#2FB873;--c5:#22A6C3;--c6:#5B6AD0;--c7:#A557D6;
+  --grad:linear-gradient(100deg,var(--c4),var(--c5) 32%,var(--c6) 64%,var(--c7));
+  --grad-warm:linear-gradient(100deg,var(--c2),var(--c1));
+  --shadow:0 6px 30px rgba(27,28,60,0.07);--shadow-lg:0 14px 50px rgba(27,28,60,0.10);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Be Vietnam Pro",sans-serif;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body::after{content:"";position:fixed;inset:-15%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(26% 30% at 10% 12%,rgba(229,72,77,.20),transparent 60%),
+    radial-gradient(28% 32% at 30% 6%,rgba(242,133,30,.18),transparent 62%),
+    radial-gradient(28% 32% at 52% 16%,rgba(237,183,42,.16),transparent 62%),
+    radial-gradient(30% 34% at 74% 8%,rgba(47,184,115,.18),transparent 62%),
+    radial-gradient(28% 32% at 90% 24%,rgba(34,166,195,.18),transparent 62%),
+    radial-gradient(34% 38% at 72% 86%,rgba(91,106,208,.20),transparent 64%),
+    radial-gradient(36% 40% at 22% 90%,rgba(165,87,214,.20),transparent 64%);
+  filter:blur(48px) saturate(118%);animation:aurora 26s ease-in-out infinite;transform-origin:55% 50%;}
+@keyframes aurora{0%,100%{transform:scale(1) translate(0,0);opacity:.92;}50%{transform:scale(1.07) translate(-1.5%,-1%);opacity:1;}}
+@media (prefers-reduced-motion:reduce){body::after{animation:none;}.reveal{opacity:1!important;transform:none!important;}}
+.wrap{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:0 28px;}
+a{color:inherit;text-decoration:none;}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+.reveal.in{opacity:1;transform:none;}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(245,244,251,0.78);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1060px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:24px;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.01em;}
+.logo .gem{width:16px;height:16px;border-radius:4px;background:var(--grad);box-shadow:0 0 12px rgba(91,106,208,.4);}
+.nav-links{display:flex;gap:24px;margin:0 auto;font-size:14.5px;color:var(--ink-soft);}
+.nav-links a:hover{color:var(--ink);}
+.btn{font:inherit;font-weight:600;font-size:14.5px;border-radius:11px;padding:11px 19px;cursor:pointer;border:1px solid transparent;transition:.22s;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 6px 20px rgba(91,106,208,.28);}
+.btn-primary:hover{filter:brightness(1.06);transform:translateY(-1px);}
+.btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--line);box-shadow:var(--shadow);}
+.btn-ghost:hover{transform:translateY(-1px);}
+@media(max-width:880px){.nav-links{display:none;}}
+
+/* HERO */
+.hero{padding:92px 0 76px;text-align:center;border-bottom:1px solid var(--line);}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:7px 16px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:28px;box-shadow:var(--shadow);}
+.eyebrow .d{width:7px;height:7px;border-radius:50%;background:var(--grad);}
+.hero h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(38px,6.5vw,68px);line-height:1.04;letter-spacing:-.02em;margin:0 auto 24px;max-width:17ch;}
+.hero .lead{font-size:19px;color:var(--ink-soft);max-width:60ch;margin:0 auto 32px;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+.btn-lg{padding:15px 28px;font-size:15.5px;border-radius:13px;}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:44px;}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 15px;font-size:13px;color:var(--ink-soft);box-shadow:var(--shadow);display:flex;align-items:center;gap:8px;}
+.chip .dot{width:8px;height:8px;border-radius:50%;}
+
+section{padding:84px 0;border-bottom:1px solid var(--line);}
+.sec-head{text-align:center;max-width:64ch;margin:0 auto 44px;}
+.sec-tag{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
+h2{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(27px,4.4vw,40px);line-height:1.12;letter-spacing:-.015em;margin:0 0 12px;}
+.sec-head p{font-size:18px;color:var(--ink-soft);margin:0;}
+p{color:var(--ink-soft);}
+
+/* value */
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+.val{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);}
+.val .vi{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;margin-bottom:14px;}
+.val h3{font-size:17px;margin:0 0 6px;font-weight:600;}
+.val p{font-size:14px;margin:0;}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.fstep{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);position:relative;}
+.fstep .fn{font-weight:700;font-size:13px;color:#fff;width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+.fstep h4{margin:0 0 4px;font-size:15.5px;font-weight:600;}
+.fstep p{margin:0;font-size:13px;}
+@media(max-width:760px){.flow{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.flow{grid-template-columns:1fr;}}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);transition:.25s;}
+.pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.pillar .ptag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:12px;}
+.pillar .ptag .pd{width:9px;height:9px;border-radius:50%;}
+.pillar h3{font-family:"Fraunces",serif;font-weight:600;font-size:22px;margin:0 0 8px;}
+.pillar p{font-size:14.5px;margin:0 0 14px;}
+.pillar ul{list-style:none;margin:0;padding:0;}
+.pillar li{position:relative;padding-left:22px;font-size:13.5px;color:var(--ink-soft);margin-bottom:7px;}
+.pillar li::before{content:"";position:absolute;left:4px;top:9px;width:6px;height:6px;border-radius:50%;background:currentColor;}
+.pillar.flag{grid-column:1 / -1;}
+.pillar.flag .feat2{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;margin-top:6px;}
+@media(max-width:760px){.pillars{grid-template-columns:1fr;}.pillar.flag .feat2{grid-template-columns:1fr;}}
+
+/* operating model */
+.om{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow);max-width:760px;margin:0 auto;}
+.om ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.om li{position:relative;padding-left:26px;font-size:14.5px;}
+.om li::before{content:"✓";position:absolute;left:0;top:1px;color:var(--c4);font-weight:700;}
+.om li b{color:var(--ink);}
+@media(max-width:600px){.om ul{grid-template-columns:1fr;}}
+
+/* deploy / commercial */
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);}
+.opt.hl{border:2px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box;}
+.opt .ot{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+.opt h3{font-family:"Fraunces",serif;font-size:21px;margin:6px 0 4px;font-weight:600;}
+.opt .otime{font-size:14px;color:var(--ink-soft);margin-bottom:14px;}
+.opt .oprice{font-family:"Fraunces",serif;font-size:30px;font-weight:600;}
+.opt .oprice small{font-size:14px;color:var(--ink-soft);font-family:"Be Vietnam Pro";font-weight:400;}
+.opt p{font-size:13.5px;margin:8px 0 0;}
+@media(max-width:600px){.opts{grid-template-columns:1fr;}}
+
+.pay{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0;}
+.pstep{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 16px;text-align:center;box-shadow:var(--shadow);}
+.pstep .pp{font-family:"Fraunces",serif;font-size:30px;font-weight:600;}
+.pstep .pp.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.pstep .pl{font-size:12.5px;color:var(--ink-soft);margin-top:4px;}
+@media(max-width:680px){.pay{grid-template-columns:1fr 1fr;}}
+
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);}
+.term h4{margin:0 0 10px;font-size:16px;font-weight:600;display:flex;align-items:center;gap:9px;}
+.term h4 .td{width:10px;height:10px;border-radius:3px;}
+.term ul{list-style:none;margin:0;padding:0;}
+.term li{position:relative;padding-left:18px;font-size:14px;color:var(--ink-soft);margin-bottom:8px;}
+.term li::before{content:"–";position:absolute;left:0;color:var(--muted);}
+.term li b{color:var(--ink);}
+@media(max-width:600px){.terms{grid-template-columns:1fr;}}
+
+.note{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--c6);border-radius:12px;padding:16px 20px;margin-top:22px;font-size:14.5px;color:var(--ink-soft);box-shadow:var(--shadow);}
+.note b{color:var(--ink);}
+
+/* next steps / CTA */
+.cta{text-align:center;padding:96px 0;}
+.cta h2{max-width:20ch;margin-left:auto;margin-right:auto;}
+.cta p{font-size:17px;max-width:54ch;margin:14px auto 30px;}
+
+footer{padding:48px 0 70px;text-align:center;border-top:1px solid var(--line);}
+.foot-logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:18px;}
+.foot-logo .gem{width:15px;height:15px;border-radius:4px;background:var(--grad);}
+.foot-sub{font-size:13.5px;color:var(--ink-soft);margin-top:8px;}
+.foot-meta{margin-top:20px;font-size:12px;color:var(--muted);}
+
+/* SCOPE BUILDER */
+.presets{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-bottom:26px;}
+.presets-lb{font-size:13px;color:var(--muted);font-weight:600;}
+.preset{font:inherit;font-weight:600;font-size:13.5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:9px 15px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;}
+.preset:hover{transform:translateY(-1px);border-color:var(--c6);}
+.preset[data-preset="all"]{background:var(--grad);color:#fff;border-color:transparent;}
+.scope{display:grid;gap:16px;max-width:920px;margin:0 auto;}
+.grp{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gc,var(--c6));border-radius:16px;padding:8px;box-shadow:var(--shadow);}
+.grp-head{display:flex;align-items:flex-start;gap:12px;padding:14px;border-radius:12px;cursor:pointer;}
+.grp-head.static{cursor:default;}
+.grp-head:hover:not(.static){background:var(--line-soft);}
+.grp-meta{flex:1;}
+.grp-meta b{display:block;font-size:16px;font-weight:600;color:var(--ink);line-height:1.35;}
+.grp-meta span{display:block;font-size:13px;color:var(--ink-soft);margin-top:2px;}
+.grp-count{flex:0 0 auto;font-size:12px;font-weight:700;color:var(--muted);background:var(--bg);border-radius:20px;padding:3px 10px;margin-top:2px;white-space:nowrap;}
+.picks{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 8px 8px;}
+@media(max-width:680px){.picks{grid-template-columns:1fr;}}
+.pick{display:flex;gap:11px;align-items:flex-start;padding:12px 13px;border:1px solid var(--line);border-radius:11px;background:var(--bg);cursor:pointer;transition:.16s;}
+.pick:hover{border-color:var(--c6);background:var(--surface);}
+.pick:has(input:checked){border:1.5px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box;box-shadow:var(--shadow);}
+.pick .meta b{display:block;font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;}
+.pick .meta span{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:1px;}
+.master,.pick input,.grp-head input{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
+.box{position:relative;flex:0 0 21px;width:21px;height:21px;border-radius:6px;border:2px solid var(--line);background:var(--surface);display:grid;place-items:center;margin-top:1px;transition:.16s;}
+.box svg{width:12px;height:12px;fill:none;stroke:#fff;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:.16s;}
+input:checked + .box{background:var(--grad);border-color:transparent;}
+input:checked + .box svg{opacity:1;}
+.master:indeterminate + .box{background:var(--c6);border-color:transparent;}
+.master:indeterminate + .box svg{opacity:0;}
+.master:indeterminate + .box::after{content:"";position:absolute;width:10px;height:3px;border-radius:2px;background:#fff;}
+.pick.radio .box{border-radius:50%;}
+.fld{padding:6px 16px 16px;}
+.flbl{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin:6px 0 7px;}
+.scope input[type=text],.scope input[type=email],.scope input[type=tel],.scope textarea,.scope select{width:100%;font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;transition:.16s;}
+.scope textarea{min-height:84px;resize:vertical;line-height:1.6;}
+.scope input:focus,.scope textarea:focus,.scope select:focus{outline:none;border-color:var(--c6);background:var(--surface);}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px 16px;}
+@media(max-width:600px){.frow{grid-template-columns:1fr;}}
+.summary{position:sticky;bottom:16px;max-width:920px;margin:18px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:var(--shadow-lg);}
+.summary .scnt{font-size:15px;color:var(--ink);margin-bottom:8px;}
+.summary .scnt b{font-family:"Fraunces",serif;font-size:22px;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+#sumList{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:6px;max-height:92px;overflow:auto;}
+#sumList li{font-size:12px;color:var(--ink-soft);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 9px;}
+#sumList li.empty{border:none;background:none;color:var(--muted);padding-left:0;}
+.summary .actions{display:flex;flex-wrap:wrap;gap:10px;}
+.contact-chips{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;}
+.contact-chips a{display:inline-flex;align-items:center;gap:7px;color:var(--ink);font-weight:600;border:1px solid var(--line);border-radius:9px;padding:7px 12px;background:var(--bg);}
+.contact-chips a:hover{border-color:var(--c6);}
+.contact-chips .who{margin-left:auto;color:var(--muted);font-weight:500;}
+.sendmsg{display:none;margin-top:12px;font-size:13.5px;line-height:1.55;border-radius:10px;padding:11px 14px;}
+.sendmsg.ok{display:block;background:rgba(47,184,115,.12);color:#1c7a4d;border:1px solid rgba(47,184,115,.3);}
+.sendmsg.info{display:block;background:rgba(91,106,208,.10);color:#3a44a0;border:1px solid rgba(91,106,208,.25);}
+@media(max-width:600px){.contact-chips .who{margin-left:0;width:100%;}}
+
+@media print{body::after{display:none;}.val,.pillar,.fstep,.opt,.pstep,.term,.om,.note,.grp,.pick,.summary,.preset{box-shadow:none!important;}.summary{position:static;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#top"><span class="gem"></span> Song Lê <span class="grad">Holdings</span></a>
+    <div class="nav-links">
+      <a href="#solution">Giải pháp</a>
+      <a href="#flow">Quy trình</a>
+      <a href="#pillars">Năng lực</a>
+      <a href="#deploy">Triển khai</a>
+      <a href="#contact">Chọn hạng mục</a>
+    </div>
+    <a class="btn btn-primary" href="#contact">Trao đổi dự án</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="d"></span> Chuyển đổi số · Thiết kế – Thi công – Bất động sản</div>
+    <h1 class="reveal">Từ bãi đất trống đến nhà chìa khoá trao tay — <span class="grad">trên một nền tảng.</span></h1>
+    <p class="lead reveal">Một nền tảng công nghệ trọn gói cho Song Lê Holdings: quy hoạch đô thị, thiết kế, kết cấu, điện–nước, nội thất, dự toán, giám sát thi công, bán hàng &amp; vận hành — hợp nhất cả tập đoàn trên một hệ thống duy nhất.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary btn-lg" href="#solution">Xem giải pháp</a>
+      <a class="btn btn-ghost btn-lg" href="#deploy">Phương án triển khai</a>
+    </div>
+    <div class="chips reveal">
+      <div class="chip"><span class="dot" style="background:var(--c7)"></span>5 trụ cột giải pháp</div>
+      <div class="chip"><span class="dot" style="background:var(--c5)"></span>Hàng chục dự án song song</div>
+      <div class="chip"><span class="dot" style="background:var(--c4)"></span>Lên sóng từ 45 ngày</div>
+      <div class="chip"><span class="dot" style="background:var(--c2)"></span>Tuân thủ Bộ Xây dựng</div>
+    </div>
+  </div>
+</header>
+
+<!-- SOLUTION / VISION -->
+<section id="solution">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag grad">Tầm nhìn</div>
+      <h2>Một đại bản doanh số cho cả tập đoàn.</h2>
+      <p>Song Lê hợp nhất các công ty thiết kế, thi công &amp; bất động sản thành holding. Nền tảng này là hạ tầng số gắn kết tất cả — biến năng lực thi công truyền thống thành cỗ máy sản xuất dự án quy mô công nghiệp.</p>
+    </div>
+    <div class="vals">
+      <div class="val reveal"><div class="vi" style="background:var(--c7)">◆</div><h3>Full-stack ngành xây dựng</h3><p>Đi suốt từ đất nền → thiết kế → dự toán → thi công → bàn giao → bán &amp; vận hành.</p></div>
+      <div class="val reveal"><div class="vi" style="background:var(--c5)">◇</div><h3>Tự động hoá thông minh</h3><p>Công nghệ AI đảm nhận phần lớn khối lượng thiết kế; kiến trúc sư &amp; kỹ sư điều hành, kiểm soát &amp; phê duyệt.</p></div>
+      <div class="val reveal"><div class="vi" style="background:var(--c4)">▲</div><h3>Quy mô đột phá</h3><p>Chạy hàng chục dự án đô thị song song; hàng trăm dự án nội thất mỗi tháng.</p></div>
+      <div class="val reveal"><div class="vi" style="background:var(--c2)">●</div><h3>Chuẩn &amp; pháp lý</h3><p>Bám tiêu chuẩn Bộ Xây dựng &amp; định mức; hồ sơ do KTS có chứng chỉ cấp &amp; chịu trách nhiệm.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag grad">Quy trình A → Z</div>
+      <h2>Một dự án đi qua nền tảng.</h2>
+      <p>Mỗi bước được hệ thống hỗ trợ tự động; kiến trúc sư &amp; kỹ sư rà soát và phê duyệt tại các điểm chốt.</p>
+    </div>
+    <div class="flow">
+      <div class="fstep reveal"><div class="fn" style="background:var(--c1)">01</div><h4>Đầu vào: đất + yêu cầu</h4><p>Diện tích, ranh giới, quy hoạch, loại hình, ngân sách.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c2)">02</div><h4>Quy hoạch &amp; cảnh quan 3D</h4><p>Bản 3D toàn khu: đường, lô, công viên, hạ tầng — nhiều phương án.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c3)">03</div><h4>Kiến trúc đa loại hình</h4><p>Nhà phố, biệt thự, chung cư, thương mại — mặt bằng, mặt đứng, mặt cắt.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c4)">04</div><h4>Kết cấu &amp; điện–nước</h4><p>Bản vẽ kết cấu, hệ điện, cấp thoát nước, HVAC — đồng bộ, đúng chuẩn.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c5)">05</div><h4>Nội thất &amp; hồ sơ sản xuất</h4><p>Phối cảnh, ánh sáng, hồ sơ kỹ thuật sản xuất thiết bị &amp; nội thất.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c6)">06</div><h4>Bóc tách &amp; dự toán</h4><p>Bảng khối lượng + dự toán chi tiết theo định mức &amp; đơn giá.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c7)">07</div><h4>Hồ sơ &amp; duyệt KTS</h4><p>Bộ hồ sơ pháp lý chuẩn; KTS ký duyệt &amp; chịu trách nhiệm.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c5)">08</div><h4>Giám sát thi công</h4><p>Theo dõi tiến độ, chất lượng — đối chiếu kế hoạch vs thực tế.</p></div>
+      <div class="fstep reveal"><div class="fn" style="background:var(--c6)">09</div><h4>Bán hàng &amp; vận hành</h4><p>Sàn BĐS, marketing, ERP &amp; kế toán cho cả tập đoàn.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section id="pillars">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag grad">Năng lực</div>
+      <h2>Năm trụ cột, một hệ điều hành.</h2>
+      <p>Tất cả chạy trên một nguồn dữ liệu chung — thiết kế, dự toán, thi công, bán hàng, kế toán không còn lệch số.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar flag reveal">
+        <div class="ptag" style="color:var(--c7)"><span class="pd" style="background:var(--c7)"></span>Trụ cột 1 · Flagship</div>
+        <h3>Design Studio — thiết kế trọn gói A→Z</h3>
+        <p>Xưởng thiết kế thông minh dựng toàn bộ hồ sơ từ một bãi đất, dưới sự điều hành của kiến trúc sư thật.</p>
+        <ul class="feat2">
+          <li>Quy hoạch &amp; cảnh quan đô thị 3D</li>
+          <li>Hạ tầng kỹ thuật (điện, cấp–thoát nước)</li>
+          <li>Kiến trúc đa loại hình + mặt bằng/đứng/cắt</li>
+          <li>Kết cấu &amp; MEP đồng bộ</li>
+          <li>Nội thất, ánh sáng &amp; hồ sơ sản xuất</li>
+          <li>Hồ sơ thi công chi tiết (shop drawing)</li>
+          <li>Bóc tách khối lượng &amp; dự toán</li>
+          <li>Tuân thủ Bộ Xây dựng + dấu KTS</li>
+        </ul>
+      </div>
+      <div class="pillar reveal">
+        <div class="ptag" style="color:var(--c5)"><span class="pd" style="background:var(--c5)"></span>Trụ cột 2</div>
+        <h3>Giám sát &amp; tiến độ thi công</h3>
+        <p>Đưa công trường lên màn hình, realtime.</p>
+        <ul><li>Kế hoạch &amp; tiến độ, cảnh báo trễ</li><li>Nhật ký, ảnh/drone đối chiếu thiết kế</li><li>Chất lượng &amp; an toàn (QA/QC)</li><li>Nghiệm thu khối lượng &amp; thanh toán</li></ul>
+      </div>
+      <div class="pillar reveal">
+        <div class="ptag" style="color:var(--c4)"><span class="pd" style="background:var(--c4)"></span>Trụ cột 3</div>
+        <h3>ERP vận hành &amp; kế toán</h3>
+        <p>Quản trị toàn tập đoàn, tự động hoá.</p>
+        <ul><li>ERP sản xuất nội thất/thiết bị</li><li>Mua sắm · kho · chuỗi cung ứng</li><li>Giá thành &amp; lợi nhuận theo dự án</li><li>Kế toán tự động, chuẩn VAS</li></ul>
+      </div>
+      <div class="pillar reveal">
+        <div class="ptag" style="color:var(--c2)"><span class="pd" style="background:var(--c2)"></span>Trụ cột 4</div>
+        <h3>Sàn BĐS, marketing &amp; affiliate</h3>
+        <p>Biến dự án thành dòng tiền.</p>
+        <ul><li>Sàn niêm yết &amp; bán hàng, hợp đồng số</li><li>Mạng lưới affiliate, hoa hồng minh bạch</li><li>Marketing tự động đa kênh</li><li>CRM &amp; chăm sóc khách</li></ul>
+      </div>
+      <div class="pillar reveal">
+        <div class="ptag" style="color:var(--c6)"><span class="pd" style="background:var(--c6)"></span>Trụ cột 5</div>
+        <h3>Pháp chế &amp; hợp đồng</h3>
+        <p>Soạn &amp; quản lý hồ sơ; người có thẩm quyền duyệt cuối.</p>
+        <ul><li>Soạn hợp đồng thi công/mua bán tự động</li><li>Hồ sơ pháp lý dự án, nhắc hạn</li><li>Rà soát rủi ro &amp; kho hợp đồng chữ ký số</li><li>Bảng điều khiển Holding toàn cảnh</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATING MODEL -->
+<section id="own">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag grad">Sở hữu &amp; vận hành</div>
+      <h2>Song Lê vận hành 100% trên nền tảng của mình.</h2>
+    </div>
+    <div class="om reveal">
+      <ul>
+        <li><b>White-label</b> — mang thương hiệu Song Lê (tên, logo, màu sắc).</li>
+        <li><b>Sở hữu dữ liệu</b> — toàn bộ dữ liệu dự án &amp; khách hàng thuộc về Song Lê.</li>
+        <li><b>Vận hành độc lập</b> — sau bàn giao, Song Lê tự vận hành toàn bộ.</li>
+        <li><b>Mô-đun hoá</b> — chọn đấu nối SaaS sẵn có hoặc xây riêng tuỳ nhu cầu.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DEPLOY / COMMERCIAL -->
+<section id="deploy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag grad">Phương án triển khai</div>
+      <h2>Triển khai nhanh, thanh toán nhẹ nhàng.</h2>
+      <p>Đội ngũ <b style="color:var(--ink)">Zeni Build — 10–15 kỹ sư</b> trực tiếp xây dựng &amp; bàn giao. Hai hướng triển khai linh hoạt:</p>
+    </div>
+
+    <div class="opts">
+      <div class="opt hl reveal">
+        <div class="ot">Khuyến nghị · Nhanh nhất</div>
+        <h3>Đấu nối nền tảng sẵn có</h3>
+        <div class="otime">Dùng được trong ~45 ngày</div>
+        <div class="oprice" style="font-size:19px;">Báo giá sau khi chốt phương án</div>
+        <p>Hạ tầng &amp; các module SaaS (vận hành, marketing) đã có sẵn — chỉ cấu hình &amp; tuỳ biến đúng theo Song Lê nên lên sóng rất nhanh.</p>
+      </div>
+      <div class="opt reveal">
+        <div class="ot">Tuỳ chỉnh chuyên sâu</div>
+        <h3>Xây riêng theo đặc thù</h3>
+        <div class="otime">5–6 tháng</div>
+        <div class="oprice" style="font-size:19px;">Báo giá theo model thực tế</div>
+        <p>Nếu Song Lê muốn xây riêng các module đặc thù (ERP/sàn riêng thay vì đấu nối SaaS) — sẽ tính theo phương án &amp; phạm vi cụ thể.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:20px;text-align:center;margin:34px 0 4px;">Thanh toán theo 3 giai đoạn</h3>
+    <div class="pay">
+      <div class="pstep reveal"><div class="pp g">30%</div><div class="pl">Ký hợp đồng · đặt cọc</div></div>
+      <div class="pstep reveal"><div class="pp g">30%</div><div class="pl">Hoàn thành MVP</div></div>
+      <div class="pstep reveal"><div class="pp g">30%</div><div class="pl">Bàn giao đầy đủ tính năng</div></div>
+      <div class="pstep reveal"><div class="pp g">10%</div><div class="pl">Sau bàn giao 45 ngày (bảo hành)</div></div>
+    </div>
+
+    <div class="terms">
+      <div class="term reveal">
+        <h4><span class="td" style="background:var(--c4)"></span>Vận hành sau bàn giao</h4>
+        <ul>
+          <li><b>Quản trị vận hành:</b> 15.000.000đ/tháng (ký theo năm).</li>
+          <li><b>Bảo trì &amp; nâng cấp AI</b> thông minh hơn theo thời gian: 5–10% giá trị hợp đồng/năm, tuỳ nhu cầu thực tế.</li>
+        </ul>
+      </div>
+      <div class="term reveal">
+        <h4><span class="td" style="background:var(--c6)"></span>Bảo hành 6 tháng</h4>
+        <ul>
+          <li>Lỗi mã nguồn hoặc lỗi ngắt kết nối: <b>khắc phục miễn phí</b>.</li>
+          <li>Lỗi do phía Song Lê thao tác gây hỏng: ngoài phạm vi bảo hành; nếu cần xây lại sẽ tính phí theo thực tế.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note reveal"><b>Cách làm việc:</b> Đây là <b>giải pháp &amp; phương án dự kiến</b>. Zeni Build sẽ deploy bản demo giải pháp để Song Lê trải nghiệm, góp ý &amp; bổ sung tính năng mong muốn. <b>Báo giá theo model thực tế</b> — sau khi chốt phương án cuối cùng sẽ báo giá chi tiết.</div>
+  </div>
+</section>
+
+<!-- SCOPE BUILDER / TRAO ĐỔI -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag grad">Trao đổi &amp; chọn hạng mục</div>
+      <h2>Tích chọn hạng mục Song Lê muốn — Zeni lên phương án &amp; báo giá.</h2>
+      <p>Không cần rành công nghệ. Hãy <b style="color:var(--ink)">tích vào ô</b> những phần tập đoàn muốn tự động hoá, ghi thêm mong muốn nếu có, rồi bấm gửi. Zeni Digital sẽ đọc lựa chọn của bạn, dựng lại phương án phù hợp và báo giá chi tiết.</p>
+    </div>
+
+    <div class="presets reveal">
+      <span class="presets-lb">Chưa biết bắt đầu từ đâu?</span>
+      <button type="button" class="preset" data-preset="all">✦ Trọn bộ chuyển đổi số toàn tập đoàn</button>
+      <button type="button" class="preset" data-preset="lean">Gói tinh gọn — bắt đầu nhanh</button>
+      <button type="button" class="preset" data-preset="clear">Bỏ chọn tất cả</button>
+    </div>
+
+    <form id="scopeForm" class="scope" onsubmit="return false;">
+
+      <div class="grp reveal" data-key="p1" style="--gc:var(--c7)">
+        <label class="grp-head">
+          <input type="checkbox" class="master">
+          <span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span>
+          <span class="grp-meta"><b>Trụ cột 1 · Design Studio — Thiết kế tự động A→Z</b><span>Tự động dựng toàn bộ hồ sơ thiết kế từ bãi đất, kiến trúc sư điều hành &amp; ký duyệt.</span></span>
+          <span class="grp-count">0/6</span>
+        </label>
+        <div class="picks">
+          <label class="pick"><input type="checkbox" data-label="Quy hoạch & cảnh quan đô thị 3D"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Quy hoạch &amp; cảnh quan đô thị 3D</b><span>Bản 3D toàn khu: đường, lô, công viên, hạ tầng.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Thiết kế kiến trúc đa loại hình"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Thiết kế kiến trúc đa loại hình</b><span>Nhà phố, biệt thự, chung cư, thương mại.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Kết cấu + Điện nước (MEP)"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Kết cấu + Điện nước (MEP)</b><span>Bản vẽ kết cấu, điện, cấp thoát nước, điều hoà.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Nội thất & phối cảnh 3D"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Nội thất &amp; phối cảnh 3D</b><span>Phối cảnh, ánh sáng, hồ sơ sản xuất nội thất.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Bóc tách khối lượng & dự toán tự động"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Bóc tách khối lượng &amp; dự toán</b><span>Bảng khối lượng + dự toán theo định mức, đơn giá.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Hồ sơ xin phép & dấu kiến trúc sư"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Hồ sơ xin phép &amp; dấu KTS</b><span>Hồ sơ pháp lý chuẩn, KTS ký &amp; chịu trách nhiệm.</span></span></label>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="p2" style="--gc:var(--c5)">
+        <label class="grp-head">
+          <input type="checkbox" class="master">
+          <span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span>
+          <span class="grp-meta"><b>Trụ cột 2 · Giám sát &amp; tiến độ thi công</b><span>Đưa công trường lên màn hình, theo dõi realtime.</span></span>
+          <span class="grp-count">0/4</span>
+        </label>
+        <div class="picks">
+          <label class="pick"><input type="checkbox" data-label="Theo dõi tiến độ, cảnh báo trễ"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Theo dõi tiến độ, cảnh báo trễ</b><span>Kế hoạch vs thực tế, tự nhắc khi chậm.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Nhật ký công trường + ảnh/drone"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Nhật ký công trường + ảnh/drone</b><span>Hình ảnh hiện trường đối chiếu bản thiết kế.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Quản lý chất lượng & an toàn (QA/QC)"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Chất lượng &amp; an toàn (QA/QC)</b><span>Kiểm soát chất lượng và an toàn lao động.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Nghiệm thu & thanh toán theo khối lượng"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Nghiệm thu &amp; thanh toán</b><span>Xác nhận khối lượng hoàn thành để thanh toán.</span></span></label>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="p3" style="--gc:var(--c4)">
+        <label class="grp-head">
+          <input type="checkbox" class="master">
+          <span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span>
+          <span class="grp-meta"><b>Trụ cột 3 · ERP vận hành &amp; kế toán</b><span>Quản trị toàn tập đoàn, tự động hoá sản xuất &amp; tài chính.</span></span>
+          <span class="grp-count">0/4</span>
+        </label>
+        <div class="picks">
+          <label class="pick"><input type="checkbox" data-label="Quản lý sản xuất nội thất/thiết bị"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Quản lý sản xuất nội thất/thiết bị</b><span>Điều hành xưởng sản xuất theo đơn hàng.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Mua sắm · Kho · Chuỗi cung ứng"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Mua sắm · Kho · Chuỗi cung ứng</b><span>Quản lý vật tư, tồn kho, nhà cung cấp.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Giá thành & lợi nhuận theo từng dự án"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Giá thành &amp; lợi nhuận theo dự án</b><span>Biết lãi/lỗ chính xác từng công trình.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Kế toán tự động (chuẩn VAS)"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Kế toán tự động (chuẩn VAS)</b><span>Sổ sách, báo cáo tài chính tự động.</span></span></label>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="p4" style="--gc:var(--c2)">
+        <label class="grp-head">
+          <input type="checkbox" class="master">
+          <span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span>
+          <span class="grp-meta"><b>Trụ cột 4 · Sàn BĐS, marketing &amp; bán hàng</b><span>Biến dự án thành dòng tiền — bán hàng &amp; chăm khách.</span></span>
+          <span class="grp-count">0/4</span>
+        </label>
+        <div class="picks">
+          <label class="pick"><input type="checkbox" data-label="Sàn niêm yết & bán hàng online"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Sàn niêm yết &amp; bán hàng online</b><span>Đăng bán dự án, hợp đồng số.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="CRM chăm sóc khách hàng"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>CRM chăm sóc khách hàng</b><span>Lưu thông tin, theo dõi &amp; chăm khách.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Mạng lưới cộng tác viên (affiliate) & hoa hồng"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Cộng tác viên (affiliate) &amp; hoa hồng</b><span>Quản lý CTV bán hàng, hoa hồng minh bạch.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Marketing tự động đa kênh"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Marketing tự động đa kênh</b><span>Facebook, Zalo, Google — tự động quảng cáo.</span></span></label>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="p5" style="--gc:var(--c6)">
+        <label class="grp-head">
+          <input type="checkbox" class="master">
+          <span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span>
+          <span class="grp-meta"><b>Trụ cột 5 · Pháp chế &amp; hợp đồng</b><span>Soạn &amp; quản lý hồ sơ; người có thẩm quyền duyệt cuối.</span></span>
+          <span class="grp-count">0/4</span>
+        </label>
+        <div class="picks">
+          <label class="pick"><input type="checkbox" data-label="Soạn hợp đồng tự động"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Soạn hợp đồng tự động</b><span>Tạo hợp đồng thi công/mua bán nhanh.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Kho hồ sơ pháp lý + nhắc hạn"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Kho hồ sơ pháp lý + nhắc hạn</b><span>Lưu trữ giấy tờ dự án, tự nhắc hạn.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Chữ ký số"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Chữ ký số</b><span>Ký hợp đồng điện tử hợp lệ.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Bảng điều khiển tổng quan cho Ban lãnh đạo"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Dashboard tổng quan Ban lãnh đạo</b><span>Toàn cảnh tập đoàn trên một màn hình.</span></span></label>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="addons" style="--gc:var(--c3)">
+        <label class="grp-head">
+          <input type="checkbox" class="master">
+          <span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span>
+          <span class="grp-meta"><b>Tuỳ chọn nâng cao</b><span>Thêm vào nếu Song Lê muốn — không bắt buộc.</span></span>
+          <span class="grp-count">0/8</span>
+        </label>
+        <div class="picks">
+          <label class="pick"><input type="checkbox" data-label="Ứng dụng di động (iOS/Android)"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Ứng dụng di động (iOS/Android)</b><span>App cho nhân viên &amp; khách hàng.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Trợ lý AI tư vấn khách 24/7 (chatbot)"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Trợ lý AI tư vấn khách 24/7</b><span>Chatbot tự động trả lời, tư vấn khách.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Mô hình BIM / số hoá 3D công trình"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Mô hình BIM / số hoá 3D</b><span>Mô hình thông tin công trình 3D.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Giám sát bằng drone / camera AI"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Giám sát bằng drone / camera AI</b><span>Tự động giám sát công trường.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Cổng cho khách theo dõi tiến độ dự án"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Cổng khách theo dõi tiến độ</b><span>Khách tự xem tiến độ căn/nhà của mình.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Đa ngôn ngữ (Việt / Anh)"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Đa ngôn ngữ (Việt / Anh)</b><span>Phục vụ khách &amp; đối tác quốc tế.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Hoá đơn điện tử & tích hợp ngân hàng"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Hoá đơn điện tử &amp; ngân hàng</b><span>Xuất hoá đơn, đối soát thu chi tự động.</span></span></label>
+          <label class="pick"><input type="checkbox" data-label="Phân quyền nhiều cấp cho cả tập đoàn"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></svg></span><span class="meta"><b>Phân quyền nhiều cấp</b><span>Mỗi phòng ban/chi nhánh có quyền riêng.</span></span></label>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="dir" style="--gc:var(--c1)">
+        <div class="grp-head static">
+          <span class="grp-meta"><b>Hướng triển khai mong muốn</b><span>Chọn 1 — hoặc để Zeni tư vấn thêm.</span></span>
+        </div>
+        <div class="picks">
+          <label class="pick radio"><input type="radio" name="dir" data-label="Nhanh nhất — đấu nối nền tảng có sẵn (~45 ngày)"><span class="box"></span><span class="meta"><b>Nhanh nhất (~45 ngày)</b><span>Đấu nối module có sẵn, lên sóng nhanh.</span></span></label>
+          <label class="pick radio"><input type="radio" name="dir" data-label="Xây riêng theo đặc thù (5–6 tháng)"><span class="box"></span><span class="meta"><b>Xây riêng (5–6 tháng)</b><span>Phát triển module riêng theo đặc thù Song Lê.</span></span></label>
+          <label class="pick radio"><input type="radio" name="dir" data-label="Chưa rõ — cần Zeni tư vấn thêm" checked><span class="box"></span><span class="meta"><b>Cần Zeni tư vấn</b><span>Chưa chắc — muốn nghe Zeni gợi ý.</span></span></label>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="scale" style="--gc:var(--c5)">
+        <div class="grp-head static">
+          <span class="grp-meta"><b>Quy mô &amp; thời gian</b><span>Giúp Zeni ước lượng đúng nguồn lực (không bắt buộc).</span></span>
+        </div>
+        <div class="frow">
+          <div><label class="flbl" for="scale1">Số dự án chạy song song dự kiến</label>
+            <select id="scale1"><option value="">— Chưa xác định —</option><option>1–5 dự án</option><option>5–20 dự án</option><option>Trên 20 dự án</option></select></div>
+          <div><label class="flbl" for="scale2">Mong muốn lên sóng trong</label>
+            <select id="scale2"><option value="">— Chưa xác định —</option><option>1–2 tháng</option><option>3–6 tháng</option><option>Linh hoạt theo tư vấn</option></select></div>
+        </div>
+        <div class="fld">
+          <label class="flbl" for="extra">Yêu cầu bổ sung khác (Song Lê muốn thêm gì cứ ghi vào đây)</label>
+          <textarea id="extra" placeholder="Ví dụ: cần kết nối phần mềm kế toán đang dùng, cần đào tạo nhân sự, ưu tiên chi nhánh Hà Nội trước…"></textarea>
+        </div>
+      </div>
+
+      <div class="grp reveal" data-key="contact" style="--gc:var(--c6)">
+        <div class="grp-head static">
+          <span class="grp-meta"><b>Thông tin để Zeni báo giá lại</b><span>Để chúng tôi liên hệ &amp; gửi phương án chi tiết cho đúng người.</span></span>
+        </div>
+        <div class="frow">
+          <div><label class="flbl" for="cName">Họ tên người phụ trách</label><input type="text" id="cName" placeholder="VD: Nguyễn Văn A"></div>
+          <div><label class="flbl" for="cCompany">Công ty</label><input type="text" id="cCompany" value="Song Lê Holdings"></div>
+          <div><label class="flbl" for="cPhone">Điện thoại / Zalo</label><input type="tel" id="cPhone" placeholder="VD: 09xx xxx xxx"></div>
+          <div><label class="flbl" for="cEmail">Email</label><input type="email" id="cEmail" placeholder="email@congty.com"></div>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="summary reveal" id="summaryCard">
+      <div class="scnt">Đã chọn <b id="cnt">0</b> hạng mục</div>
+      <ul id="sumList"><li class="empty">Chưa chọn mục nào — tích vào các ô phía trên, hoặc bấm “Trọn bộ”.</li></ul>
+      <div class="actions">
+        <button type="button" id="sendBtn" class="btn btn-primary btn-lg">Gửi yêu cầu cho Zeni →</button>
+        <button type="button" id="copyBtn" class="btn btn-ghost">Sao chép nội dung</button>
+        <button type="button" id="dlBtn" class="btn btn-ghost">Tải phiếu (.txt)</button>
+      </div>
+      <div class="contact-chips">
+        <a href="tel:0913192586">📞 0913 192 586</a>
+        <a href="mailto:ceo@zenidigital.com">✉️ ceo@zenidigital.com</a>
+        <span class="who">Mr. Thiên Mộc Đức · Zeni Digital</span>
+      </div>
+      <div id="sendMsg" class="sendmsg"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo"><span class="gem"></span> Song Lê <span class="grad">Holdings</span></div>
+    <div class="foot-sub">Nền tảng chuyển đổi số · Thiết kế — Thi công — Bất động sản</div>
+    <div class="foot-meta">Đối tác công nghệ: <b>Zeni Digital</b> · Mr. Thiên Mộc Đức · 0913 192 586 · ceo@zenidigital.com · © 2026</div>
+  </div>
+</footer>
+
+<script>
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+<!-- ============ PHIẾU CHỌN HẠNG MỤC ============
+     Để khách bấm "Gửi yêu cầu" là email tự bay thẳng về hộp thư của Zeni (không cần khách có app mail):
+     1) Vào https://web3forms.com  →  nhập email  ceo@zenidigital.com  →  bấm lấy Access Key (miễn phí).
+     2) Dán key đó vào trong dấu ngoặc kép ở dòng  var W3F_KEY = ""  ngay bên dưới.
+     Nếu để trống, nút "Gửi yêu cầu" sẽ tự mở ứng dụng email của khách (vẫn dùng được). -->
+<script>
+(function(){
+  var W3F_KEY = ""; // ⬅️ dán Access Key web3forms vào đây (tuỳ chọn)
+
+  function $(id){ return document.getElementById(id); }
+  function val(id){ var el=$(id); return el ? el.value.trim() : ""; }
+  function groups(){ return [].slice.call(document.querySelectorAll('.grp')); }
+  function labelOf(i){ return i.getAttribute('data-label') || (i.closest('.pick') ? i.closest('.pick').querySelector('.meta b').textContent.trim() : ''); }
+
+  function updateGroup(g){
+    var subs=[].slice.call(g.querySelectorAll('.picks input[type=checkbox]'));
+    var master=g.querySelector('.master');
+    var cnt=g.querySelector('.grp-count');
+    var n=subs.filter(function(s){return s.checked;}).length;
+    if(master){ master.checked = (n===subs.length && subs.length>0); master.indeterminate = (n>0 && n<subs.length); }
+    if(cnt) cnt.textContent = n + '/' + subs.length;
+  }
+
+  function refresh(){
+    groups().forEach(updateGroup);
+    var picked=[].slice.call(document.querySelectorAll('.picks input[type=checkbox]:checked'));
+    $('cnt').textContent = picked.length;
+    var ul=$('sumList'); ul.innerHTML='';
+    if(!picked.length){
+      var e=document.createElement('li'); e.className='empty';
+      e.textContent='Chưa chọn mục nào — tích vào các ô phía trên, hoặc bấm “Trọn bộ”.';
+      ul.appendChild(e);
+    } else {
+      picked.forEach(function(i){ var li=document.createElement('li'); li.textContent=labelOf(i); ul.appendChild(li); });
+    }
+  }
+
+  document.addEventListener('change', function(e){
+    var t=e.target;
+    if(t.classList && t.classList.contains('master')){
+      var g=t.closest('.grp');
+      [].slice.call(g.querySelectorAll('.picks input[type=checkbox]')).forEach(function(s){ s.checked=t.checked; });
+    }
+    refresh();
+  });
+
+  [].slice.call(document.querySelectorAll('.preset')).forEach(function(b){
+    b.addEventListener('click', function(){
+      var p=b.getAttribute('data-preset');
+      var all=[].slice.call(document.querySelectorAll('.picks input[type=checkbox]'));
+      if(p==='clear') all.forEach(function(c){ c.checked=false; });
+      if(p==='all')   all.forEach(function(c){ c.checked=true; });
+      if(p==='lean'){
+        all.forEach(function(c){ c.checked=false; });
+        ['p1','p2'].forEach(function(k){
+          [].slice.call(document.querySelectorAll('.grp[data-key="'+k+'"] .picks input[type=checkbox]')).forEach(function(c){ c.checked=true; });
+        });
+      }
+      refresh();
+      $('summaryCard').scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  });
+
+  function buildText(){
+    var out='PHIẾU CHỌN HẠNG MỤC — NỀN TẢNG CHUYỂN ĐỔI SỐ SONG LÊ HOLDINGS\n';
+    out+='(Khách hàng tích chọn — gửi Zeni Digital lên phương án & báo giá)\n\n';
+    groups().forEach(function(g){
+      var tEl=g.querySelector('.grp-meta b'); if(!tEl) return;
+      var items=[].slice.call(g.querySelectorAll('.picks input:checked')).map(labelOf);
+      if(items.length){ out+='• '+tEl.textContent.trim()+':\n'; items.forEach(function(t){ out+='    - '+t+'\n'; }); out+='\n'; }
+    });
+    var s1=val('scale1'), s2=val('scale2');
+    if(s1) out+='• Số dự án song song dự kiến: '+s1+'\n';
+    if(s2) out+='• Mong muốn lên sóng trong: '+s2+'\n';
+    var ex=val('extra'); if(ex) out+='\n• Yêu cầu bổ sung khác:\n'+ex+'\n';
+    return out.replace(/\s+$/,'');
+  }
+  function contactBlock(){
+    return '\n\n— THÔNG TIN LIÊN HỆ —\nNgười gửi: '+val('cName')+'\nCông ty: '+val('cCompany')+'\nĐiện thoại/Zalo: '+val('cPhone')+'\nEmail: '+val('cEmail');
+  }
+  function fullText(){ return buildText()+contactBlock(); }
+  function anyPicked(){ return document.querySelectorAll('.picks input[type=checkbox]:checked').length>0; }
+  function msg(type, html){ var m=$('sendMsg'); m.className='sendmsg '+type; m.innerHTML=html; }
+
+  function openMail(){
+    var url='mailto:ceo@zenidigital.com?subject='+encodeURIComponent('[Song Lê Holdings] Phiếu chọn hạng mục nền tảng')+'&body='+encodeURIComponent(fullText());
+    window.location.href=url;
+    msg('info','Đang mở ứng dụng email để bạn bấm <b>Gửi</b>. Nếu máy chưa cài email, hãy bấm <b>“Sao chép nội dung”</b> rồi dán gửi qua Zalo <b>0913 192 586</b>.');
+  }
+
+  $('sendBtn').addEventListener('click', function(){
+    if(!anyPicked()){ msg('info','Hãy tích chọn ít nhất 1 hạng mục bạn quan tâm trước khi gửi nhé.'); $('scopeForm').scrollIntoView({behavior:'smooth'}); return; }
+    if(W3F_KEY && W3F_KEY.length>10){
+      msg('info','Đang gửi yêu cầu tới Zeni…');
+      fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({access_key:W3F_KEY,subject:'[Song Lê Holdings] Phiếu chọn hạng mục nền tảng',from_name:(val('cName')||'Song Lê Holdings'),replyto:val('cEmail'),botcheck:'','Người gửi':val('cName'),'Công ty':val('cCompany'),'Điện thoại/Zalo':val('cPhone'),'Email':val('cEmail'),'Nội dung chọn':buildText()})
+      }).then(function(r){ return r.json(); }).then(function(j){
+        if(j && j.success){ msg('ok','✓ Đã gửi thành công! Zeni Digital sẽ xem lựa chọn của bạn và liên hệ lại sớm để chốt phương án &amp; báo giá. Cảm ơn Song Lê Holdings!'); }
+        else { openMail(); }
+      }).catch(function(){ openMail(); });
+    } else { openMail(); }
+  });
+
+  function fallbackCopy(text){ var ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); }catch(e){} document.body.removeChild(ta); }
+  $('copyBtn').addEventListener('click', function(){
+    var text=fullText();
+    function done(){ msg('ok','✓ Đã sao chép toàn bộ lựa chọn. Dán (Ctrl/Cmd+V) vào Zalo/Email gửi cho Zeni: 0913 192 586 · ceo@zenidigital.com.'); }
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
+    else { fallbackCopy(text); done(); }
+  });
+
+  $('dlBtn').addEventListener('click', function(){
+    var blob=new Blob([fullText()],{type:'text/plain;charset=utf-8'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='Phieu-chon-hang-muc-SongLe.txt';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    msg('ok','✓ Đã tải phiếu chọn (.txt). Bạn gửi file này qua Zalo/Email cho Zeni: 0913 192 586.');
+  });
+
+  refresh();
+})();
+</script>
+</body>
+</html>
