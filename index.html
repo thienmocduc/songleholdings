@@ -48,10 +48,8 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans',sans-serif;l
 .topbar{position:sticky;top:0;z-index:100;background:var(--bar-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transition:background .5s,border-color .5s}
 .topbar-inner{max-width:1180px;margin:0 auto;padding:0 32px;height:74px;display:flex;align-items:center;justify-content:space-between}
 .tb-brand{display:flex;align-items:center;gap:13px}
-.tb-brand .seal{width:60px;height:60px;border-radius:50%;border:2.5px solid transparent;background:var(--panel) padding-box,var(--accent-grad) border-box;display:grid;place-items:center;font-family:'Noto Serif',serif;font-weight:700;font-size:19px;letter-spacing:-.02em;flex-shrink:0}
-.tb-brand .seal span{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .tb-brand .tt{display:flex;flex-direction:column;line-height:1.15}
-.tb-brand .tt .n{font-family:'Noto Sans',sans-serif;font-weight:800;font-size:22px;color:var(--white);letter-spacing:.01em}
+.tb-brand .tt .n{font-family:'Noto Sans',sans-serif;font-weight:800;font-size:22px;color:var(--gold-bright);letter-spacing:.01em}
 .tb-brand .tt .s{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.26em;color:var(--text-dim);margin-top:1px}
 .tb-right{display:flex;align-items:center;gap:22px}
 .tb-tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-dim);letter-spacing:.18em}
@@ -141,8 +139,11 @@ section{position:relative;z-index:2}
 .imp-row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-top:1px solid var(--line)}
 .imp-row:first-of-type{border-top:none}
 .imp-row .il{font-size:17px;color:var(--text-dim);font-weight:300;max-width:60%}
-.imp-row .iv{font-family:'Noto Serif',serif;font-weight:600;font-size:22px;color:var(--text)}
+.imp-row .iv{font-family:'Noto Serif',serif;font-weight:600;font-size:22px;color:var(--text);text-align:right}
 .imp-col.after .iv{font-weight:700}
+.imp-row.stack{flex-direction:column;align-items:flex-start;gap:5px}
+.imp-row.stack .il{max-width:100%}
+.imp-row.stack .iv{font-size:19px;text-align:left}
 .impact-arrow{display:flex;align-items:center;justify-content:center;padding:0 18px}
 .impact-arrow .aw{width:46px;height:46px;border-radius:50%;background:var(--accent-grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:23px}
 
@@ -242,8 +243,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
 <div class="topbar">
   <div class="topbar-inner">
     <div class="tb-brand">
-      <span class="seal"><span>HCD</span></span>
-      <span class="tt"><span class="n">HCD Holdings</span><span class="s">ARCHITECTURAL INTELLIGENCE</span></span>
+      <span class="tt"><span class="n">HCD Holdings</span><span class="s">TRÍ TUỆ KIẾN TRÚC</span></span>
     </div>
     <div class="tb-right">
       <span class="tb-tag">HCD ECOSYSTEM · MMXXVI</span>
@@ -301,7 +301,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       </div>
 
       <div class="layer-card">
-        <div class="lc-head"><span class="lc-num">Tầng 02</span><h3>Trí tuệ Vận hành</h3><span class="lc-sys">Automation OS · 16 cố vấn AI</span></div>
+        <div class="lc-head"><span class="lc-num">Tầng 02</span><h3>Trí tuệ Vận hành</h3><span class="lc-sys">Hệ thống Tự động hóa · 16 cố vấn AI</span></div>
         <p class="lc-power">Giải phóng lãnh đạo khỏi gánh nặng vận hành. Một <b>mạng lưới 16 cố vấn AI chuẩn tư duy MBA</b> — từ Cố vấn Pháp chế, Nhân sự, đến Giám đốc Điều hành ảo — làm việc không nghỉ, biến dữ liệu thành quyết định. Doanh nghiệp vận hành sắc bén hơn mà <b>không cần bành trướng bộ máy nhân sự</b>.</p>
         <div class="lc-compare">
           <div class="lc-side before">
@@ -316,7 +316,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       </div>
 
       <div class="layer-card">
-        <div class="lc-head"><span class="lc-num">Tầng 03</span><h3>Xương sống Dữ liệu</h3><span class="lc-sys">Full-Stack ERP</span></div>
+        <div class="lc-head"><span class="lc-num">Tầng 03</span><h3>Xương sống Dữ liệu</h3><span class="lc-sys">Hệ thống Quản trị Dữ liệu Toàn diện (ERP)</span></div>
         <p class="lc-power">Nơi mọi con số hội tụ. ERP liền mạch từ bản vẽ xuống kho vật tư, tự động hóa lệnh mua hàng, <b>gìn giữ biên lợi nhuận của từng dự án</b>. Trợ lý ERP thông minh trả lời mọi câu hỏi bằng lời — dữ liệu và biểu đồ hiện ra tức thì, không còn lạc trong mê cung bảng biểu.</p>
         <div class="lc-compare">
           <div class="lc-side before">
@@ -331,7 +331,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       </div>
 
       <div class="layer-card">
-        <div class="lc-head"><span class="lc-num">Tầng 04</span><h3>Thương mại hóa</h3><span class="lc-sys">SaaS &amp; Thương mại số</span></div>
+        <div class="lc-head"><span class="lc-num">Tầng 04</span><h3>Thương mại hóa</h3><span class="lc-sys">Thương mại hóa &amp; Kinh doanh số</span></div>
         <p class="lc-power">Biến năng lực thành dòng tiền. Nền tảng cho thuê phần mềm theo thuê bao tới doanh nghiệp kiến trúc khác, mở <b>Cổng đối tác vật liệu</b> để các thương hiệu cùng tham gia, và thu <b>hoa hồng chuỗi cung ứng</b> khi vật liệu được chọn vào công trình. Từ trung tâm chi phí trở thành trung tâm sinh lời.</p>
         <div class="lc-compare">
           <div class="lc-side before">
@@ -346,7 +346,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       </div>
 
       <div class="layer-card">
-        <div class="lc-head"><span class="lc-num">Tầng 05</span><h3>Điểm chạm Thương hiệu</h3><span class="lc-sys">Landing &amp; Lễ tân AI</span></div>
+        <div class="lc-head"><span class="lc-num">Tầng 05</span><h3>Điểm chạm Thương hiệu</h3><span class="lc-sys">Trang chủ &amp; Lễ tân AI</span></div>
         <p class="lc-power">Ấn tượng đầu tiên định hình đẳng cấp. Mặt tiền số tối giản, tinh tế; <b>Lễ tân AI am hiểu trọn hệ sinh thái</b>, đón khách 24/7, thấu hiểu nhu cầu và trân trọng lưu giữ từng khách hàng tiềm năng vào hệ thống — không bỏ lỡ một cơ hội nào.</p>
         <div class="lc-compare">
           <div class="lc-side before">
@@ -361,7 +361,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       </div>
 
       <div class="layer-card">
-        <div class="lc-head"><span class="lc-num">Tầng 06</span><h3>Trải nghiệm Khách hàng</h3><span class="lc-sys">Client Portal · VIP</span></div>
+        <div class="lc-head"><span class="lc-num">Tầng 06</span><h3>Trải nghiệm Khách hàng</h3><span class="lc-sys">Cổng Khách hàng · VIP</span></div>
         <p class="lc-power">Nâng dịch vụ lên chuẩn quốc tế. Khách hàng của những công trình cao cấp đăng nhập cổng riêng để <b>chiêm ngưỡng phương án 3D, theo dõi tiến độ thi công theo thời gian thực, duyệt và ký từng cột mốc</b>. Một trải nghiệm minh bạch, sang trọng và tận tâm — khác biệt hẳn so với đối thủ.</p>
         <div class="lc-compare">
           <div class="lc-side before">
@@ -370,7 +370,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
           </div>
           <div class="lc-side after">
             <div class="lch">Sau</div>
-            <ul><li>Theo dõi tiến độ <b>real-time trên cổng riêng</b></li><li>Duyệt &amp; ký <b>online từng cột mốc</b></li><li>Trải nghiệm VIP <b>chuẩn quốc tế</b></li></ul>
+            <ul><li>Theo dõi tiến độ <b>theo thời gian thực trên cổng riêng</b></li><li>Duyệt &amp; ký <b>trực tuyến từng cột mốc</b></li><li>Trải nghiệm VIP <b>chuẩn quốc tế</b></li></ul>
           </div>
         </div>
       </div>
@@ -404,7 +404,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
           <h3>Kiến trúc xây dựng dân dụng</h3>
           <div class="otag">THỊ TRƯỜNG LỚN · NHU CẦU LIÊN TỤC</div>
           <p>Thị trường rộng và ổn định nhất. Hệ thống tự tổ chức kết cấu, hóa giải mọi xung đột Điện – Nước – Kết cấu ngay trên mô hình BIM <b>trước khi thi công</b> — loại bỏ đục phá, làm lại, đội chi phí. Chất lượng công trình tăng, biên lợi nhuận được bảo toàn.</p>
-          <div class="ometa"><div class="om"><div class="omn grad-text">+28,7%</div><div class="oml">Kiến trúc &amp; Xây dựng dẫn đầu tăng trưởng tuyển dụng</div></div><div class="om"><div class="omn grad-text">Zero clash</div><div class="oml">Hết xung đột kỹ thuật tại công trường</div></div></div>
+          <div class="ometa"><div class="om"><div class="omn grad-text">+28,7%</div><div class="oml">Kiến trúc &amp; Xây dựng dẫn đầu tăng trưởng tuyển dụng</div></div><div class="om"><div class="omn grad-text">Không xung đột</div><div class="oml">Hết xung đột kỹ thuật tại công trường</div></div></div>
         </div>
       </div>
       <div class="opp-row">
@@ -487,13 +487,13 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
 
     <div class="market-table reveal">
       <div class="mt-row head"><div class="mn">Hệ thống</div><div class="mv">Giá trị thị trường</div></div>
-      <div class="mt-row"><div class="mn">I · Urban Master Planner</div><div class="mv">800tr – 1,2 tỷ</div></div>
-      <div class="mt-row"><div class="mn">II · Architectural Builder</div><div class="mv">1,2 – 1,8 tỷ</div></div>
-      <div class="mt-row"><div class="mn">III · Interior Detailer</div><div class="mv">1,5 – 2,2 tỷ</div></div>
-      <div class="mt-row"><div class="mn">IV · Automation OS</div><div class="mv">800tr – 1,2 tỷ</div></div>
-      <div class="mt-row"><div class="mn">V · Full-Stack ERP</div><div class="mv">1,0 – 1,5 tỷ</div></div>
-      <div class="mt-row"><div class="mn">VI · SaaS &amp; Thương mại số</div><div class="mv">1,2 – 1,8 tỷ</div></div>
-      <div class="mt-row"><div class="mn">VII · Điểm chạm &amp; Lễ tân AI</div><div class="mv">250 – 400tr</div></div>
+      <div class="mt-row"><div class="mn">I · Hệ thống Quy hoạch &amp; Kiến trúc Đô thị</div><div class="mv">800tr – 1,2 tỷ</div></div>
+      <div class="mt-row"><div class="mn">II · Hệ thống Kiến trúc Xây dựng (BIM)</div><div class="mv">1,2 – 1,8 tỷ</div></div>
+      <div class="mt-row"><div class="mn">III · Hệ thống Thiết kế Nội thất 3D &amp; Bản vẽ Kỹ thuật Chi tiết</div><div class="mv">1,5 – 2,2 tỷ</div></div>
+      <div class="mt-row"><div class="mn">IV · Hệ thống Tự động hóa Vận hành &amp; Cố vấn AI</div><div class="mv">800tr – 1,2 tỷ</div></div>
+      <div class="mt-row"><div class="mn">V · Hệ thống Quản trị Dữ liệu Doanh nghiệp (ERP)</div><div class="mv">1,0 – 1,5 tỷ</div></div>
+      <div class="mt-row"><div class="mn">VI · Nền tảng Thương mại hóa &amp; Kinh doanh số</div><div class="mv">1,2 – 1,8 tỷ</div></div>
+      <div class="mt-row"><div class="mn">VII · Hệ thống Điểm chạm Thương hiệu &amp; Lễ tân AI</div><div class="mv">250 – 400tr</div></div>
       <div class="mt-row total"><div class="mn">Tổng giá trị bóc tách riêng lẻ</div><div class="mv grad-text">~6,75 – 10,1 tỷ</div></div>
     </div>
 
@@ -518,7 +518,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
         <div class="tdesc">Toàn bộ gói Signature, bổ sung Cổng khách hàng VIP — nâng dịch vụ HCD lên chuẩn mực quốc tế.</div>
         <ul>
           <li>Tất cả tính năng gói <b>Signature</b></li>
-          <li><b>Client Portal</b> VIP: theo dõi tiến độ, duyệt &amp; ký online</li>
+          <li><b>Cổng Khách hàng VIP</b>: theo dõi tiến độ, duyệt &amp; ký trực tuyến</li>
           <li>Trải nghiệm khách hàng khác biệt</li>
           <li>Đồng hành cố vấn <b>6 tháng</b></li>
         </ul>
@@ -556,21 +556,21 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       <div class="imp-col">
         <div class="ih">Tự xây đội ngũ công nghệ nội bộ</div>
         <div class="isub">Chủ động nhưng rủi ro cao</div>
-        <div class="imp-row"><span class="il">Chi phí nhân sự (CTO + 5–7 kỹ sư BIM/AI) / năm</span><span class="iv">&gt;2 tỷ</span></div>
-        <div class="imp-row"><span class="il">Thời gian có phiên bản dùng được (MVP)</span><span class="iv">18–24 tháng</span></div>
-        <div class="imp-row"><span class="il">Rủi ro nhân sự chủ chốt nghỉ việc</span><span class="iv">Cao — mất tri thức, đình trệ</span></div>
-        <div class="imp-row"><span class="il">Bảo trì, nâng cấp, R&amp;D liên tục</span><span class="iv">Tự chịu 100% chi phí</span></div>
-        <div class="imp-row"><span class="il">Tỷ lệ dự án phần mềm nội bộ trễ hạn / đội vốn</span><span class="iv">~60–70%</span></div>
+        <div class="imp-row stack"><span class="il">Chi phí nhân sự (CTO + 5–7 kỹ sư BIM/AI) / năm</span><span class="iv">&gt;2 tỷ</span></div>
+        <div class="imp-row stack"><span class="il">Thời gian có phiên bản đầu tiên dùng được</span><span class="iv">18–24 tháng</span></div>
+        <div class="imp-row stack"><span class="il">Rủi ro nhân sự chủ chốt nghỉ việc (mất tri thức, đình trệ)</span><span class="iv">Cao</span></div>
+        <div class="imp-row stack"><span class="il">Bảo trì, nâng cấp, R&amp;D liên tục</span><span class="iv">Tự chịu 100% chi phí</span></div>
+        <div class="imp-row stack"><span class="il">Tỷ lệ dự án phần mềm nội bộ trễ hạn / đội vốn</span><span class="iv">~60–70%</span></div>
       </div>
       <div class="impact-arrow"><div class="aw">→</div></div>
       <div class="imp-col after">
         <div class="ih">Đầu tư HCD Ecosystem</div>
         <div class="isub">Sẵn sàng, đồng hành đến khi vận hành</div>
-        <div class="imp-row"><span class="il">Chi phí đầu tư</span><span class="iv">3,5–4,5 tỷ một lần + vận hành theo dùng</span></div>
-        <div class="imp-row"><span class="il">Thời gian triển khai</span><span class="iv">Theo tuần</span></div>
-        <div class="imp-row"><span class="il">Rủi ro nhân sự</span><span class="iv">Thấp — đội ngũ HCD vận hành</span></div>
-        <div class="imp-row"><span class="il">Bảo trì, nâng cấp, R&amp;D liên tục</span><span class="iv">HCD đảm nhiệm</span></div>
-        <div class="imp-row"><span class="il">Cam kết đồng hành đến khi vận hành hiệu quả</span><span class="iv">6 tháng</span></div>
+        <div class="imp-row stack"><span class="il">Chi phí đầu tư</span><span class="iv">3,5–4,5 tỷ một lần + vận hành theo dùng</span></div>
+        <div class="imp-row stack"><span class="il">Thời gian thi công dự án</span><span class="iv">4–6 tháng</span></div>
+        <div class="imp-row stack"><span class="il">Rủi ro nhân sự (đội ngũ Zeni Digital vận hành công nghệ)</span><span class="iv">Thấp</span></div>
+        <div class="imp-row stack"><span class="il">Bảo trì, nâng cấp, R&amp;D liên tục</span><span class="iv">Zeni Digital đảm nhiệm</span></div>
+        <div class="imp-row stack"><span class="il">Cam kết đồng hành đến khi vận hành hiệu quả</span><span class="iv">6 tháng</span></div>
       </div>
     </div>
   </div>
