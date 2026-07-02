@@ -198,6 +198,12 @@ section{position:relative;z-index:2}
 .excl-box{margin-top:24px;border:1px solid var(--line);border-radius:14px;padding:22px 26px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text-dim);line-height:2}
 .excl-box .ex-lbl{color:var(--rose)}
 
+/* PAYMENT SCHEDULE */
+.pay-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.pay-step{background:var(--panel);padding:30px 24px;text-align:center}
+.pay-step .pn{font-family:'Noto Serif',serif;font-weight:600;font-size:40px}
+.pay-step .pl{font-family:'Noto Sans',sans-serif;font-weight:600;font-size:15px;color:var(--white);margin-top:10px;line-height:1.4}
+
 /* ESCORT */
 .escort{border:1.5px solid transparent;background:var(--panel) padding-box,var(--accent-grad) border-box;border-radius:22px;padding:52px 48px;position:relative;overflow:hidden}
 .escort-top{display:flex;align-items:center;gap:18px;margin-bottom:22px}
@@ -228,7 +234,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
 
 @media(max-width:920px){
   .tb-tag{display:none}
-  .lc-compare,.impact-grid,.lead-band,.tiers,.addon-grid,.escort-steps{grid-template-columns:1fr}
+  .lc-compare,.impact-grid,.lead-band,.tiers,.addon-grid,.escort-steps,.pay-steps{grid-template-columns:1fr}
   .impact-arrow{padding:16px 0}.impact-arrow .aw{transform:rotate(90deg)}
   .opp-row{grid-template-columns:1fr;gap:12px}
   .mt-row{grid-template-columns:1fr}.mt-row .mv{text-align:left;margin-top:6px}
@@ -539,6 +545,38 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       — Hạ tầng ZeniCloud, GPU render, token AI vận hành — xem bảng tạm tính ở trên<br>
       — Phí vận hành &amp; bảo trì năm: ~15–20% giá trị hợp đồng
     </div>
+  </div>
+</section>
+
+<!-- ===== LỘ TRÌNH THANH TOÁN ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="ornament"><span class="ln"></span><span class="dm">✦</span></div>
+      <div class="eyebrow">Lộ trình thanh toán</div>
+      <h2>Thanh toán nhẹ nhàng, <span class="g grad-text nowrap">rõ ràng từng mốc</span>.</h2>
+      <p>Bốn giai đoạn thanh toán gắn liền với tiến độ triển khai thực tế — minh bạch, dễ theo dõi, dùng trực tiếp làm điều khoản hợp đồng.</p>
+    </div>
+
+    <div class="pay-steps reveal">
+      <div class="pay-step"><div class="pn grad-text">30%</div><div class="pl">Ký hợp đồng · đặt cọc</div></div>
+      <div class="pay-step"><div class="pn grad-text">30%</div><div class="pl">Hoàn thành MVP</div></div>
+      <div class="pay-step"><div class="pn grad-text">30%</div><div class="pl">Bàn giao đầy đủ tính năng</div></div>
+      <div class="pay-step"><div class="pn grad-text">10%</div><div class="pl">Sau bàn giao 45 ngày (bảo hành)</div></div>
+    </div>
+
+    <div class="addon-grid reveal" style="margin-top:20px">
+      <div class="addon">
+        <h4>Vận hành sau bàn giao</h4>
+        <p>Quản trị vận hành: <b style="color:var(--text)">15.000.000đ/tháng</b> (ký theo năm). Bảo trì &amp; nâng cấp AI thông minh hơn theo thời gian: 5–10% giá trị hợp đồng/năm, tuỳ nhu cầu thực tế.</p>
+      </div>
+      <div class="addon">
+        <h4>Bảo hành 6 tháng</h4>
+        <p>Lỗi mã nguồn hoặc lỗi ngắt kết nối: <b style="color:var(--text)">khắc phục miễn phí</b>. Lỗi do phía chủ đầu tư thao tác gây hỏng: ngoài phạm vi bảo hành; nếu cần xây lại sẽ tính phí theo thực tế.</p>
+      </div>
+    </div>
+
+    <div class="impact-note reveal" style="margin-top:16px">// Đây là phương án dự kiến. HCD Holdings sẽ deploy bản demo giải pháp để trải nghiệm, góp ý &amp; bổ sung tính năng mong muốn trước khi chốt phạm vi và báo giá chi tiết.</div>
   </div>
 </section>
 
