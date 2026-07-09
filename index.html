@@ -187,7 +187,7 @@ section{position:relative;z-index:2}
 .tier li b{color:var(--white);font-weight:600}
 
 /* ADD-ON */
-.addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.addon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .addon{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;transition:border-color .3s}
 .addon:hover{border-color:var(--rose-deep)}
 .addon .ah{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:10px}
@@ -458,9 +458,10 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
         <div class="imp-row"><span class="il">Tỷ lệ dự án đúng tiến độ</span><span class="iv">~85–92%</span></div>
         <div class="imp-row"><span class="il">Biên lợi nhuận gộp trung bình</span><span class="iv">~20–25%</span></div>
         <div class="imp-row"><span class="il">Thời gian họp &amp; tổng hợp báo cáo</span><span class="iv">~6% quỹ giờ</span></div>
-        <div class="imp-row"><span class="il">Chi phí quản trị công nghệ / năm</span><span class="iv">~558tr</span></div>
+        <div class="imp-row"><span class="il">Chi phí quản trị công nghệ / năm</span><span class="iv">~720tr</span></div>
       </div>
     </div>
+    <div class="impact-note reveal" style="margin-top:8px">// ~720tr/năm = 540tr quản trị vận hành + R&amp;D nâng cấp (45tr/tháng) + ~180tr hạ tầng ZeniCloud ở mức dùng thấp (xem bảng tạm tính hạ tầng ở mục báo giá) — khớp đúng bảng giá chính thức, không phải số minh hoạ tách rời.</div>
   </div>
 </section>
 
@@ -488,62 +489,69 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       <div class="ornament"><span class="ln"></span><span class="dm">✦</span></div>
       <div class="eyebrow">Đầu tư · tham khảo thị trường VN 2026</div>
       <h2>Giá trị xứng tầm, <span class="g grad-text nowrap">ưu đãi người đồng hành</span>.</h2>
-      <p>Bảng dưới là giá trị tham khảo nếu triển khai riêng lẻ từng hệ thống. HCD Holdings dành mức ưu đãi đặc biệt cho đối tác chiến lược đồng hành giai đoạn đầu.</p>
+      <p>Bảng dưới là giá trị thị trường tham khảo của 9 model. HCD Holdings áp <b>build lẻ 45%</b> giá thị trường mỗi model (khách chọn ưu tiên), hoặc <b>trọn bộ 35%</b> — mức thấp nhất — kèm cam kết đồng hành đến khi từng model vận hành hiệu quả.</p>
     </div>
 
     <div class="market-table reveal">
       <div class="mt-row head"><div class="mn">Hệ thống</div><div class="mv">Giá trị thị trường</div></div>
-      <div class="mt-row"><div class="mn">I · Hệ thống Quy hoạch &amp; Kiến trúc Đô thị</div><div class="mv">800tr – 1,2 tỷ</div></div>
-      <div class="mt-row"><div class="mn">II · Hệ thống Kiến trúc Xây dựng (BIM)</div><div class="mv">1,2 – 1,8 tỷ</div></div>
-      <div class="mt-row"><div class="mn">III · Hệ thống Thiết kế Nội thất 3D &amp; Bản vẽ Kỹ thuật Chi tiết</div><div class="mv">1,5 – 2,2 tỷ</div></div>
-      <div class="mt-row"><div class="mn">IV · Hệ thống Tự động hóa Vận hành &amp; Cố vấn AI</div><div class="mv">800tr – 1,2 tỷ</div></div>
-      <div class="mt-row"><div class="mn">V · Hệ thống Quản trị Dữ liệu Doanh nghiệp (ERP)</div><div class="mv">1,0 – 1,5 tỷ</div></div>
-      <div class="mt-row"><div class="mn">VI · Nền tảng Thương mại hóa &amp; Kinh doanh số</div><div class="mv">1,2 – 1,8 tỷ</div></div>
-      <div class="mt-row"><div class="mn">VII · Hệ thống Điểm chạm Thương hiệu &amp; Lễ tân AI</div><div class="mv">250 – 400tr</div></div>
-      <div class="mt-row total"><div class="mn">Tổng giá trị bóc tách riêng lẻ</div><div class="mv grad-text">~6,75 – 10,1 tỷ</div></div>
+      <div class="mt-row"><div class="mn" style="color:var(--rose);font-weight:600">▸ Nhóm Thiết kế</div><div class="mv"></div></div>
+      <div class="mt-row"><div class="mn">Quy hoạch &amp; Kiến trúc Đô thị</div><div class="mv">800tr – 1,2 tỷ</div></div>
+      <div class="mt-row"><div class="mn">Kiến trúc Xây dựng (BIM)</div><div class="mv">1,2 – 1,8 tỷ</div></div>
+      <div class="mt-row"><div class="mn">Thiết kế Nội thất 3D &amp; Bản vẽ Kỹ thuật</div><div class="mv">1,5 – 2,2 tỷ</div></div>
+      <div class="mt-row"><div class="mn" style="color:var(--rose);font-weight:600">▸ Nhóm Vận hành &amp; Kinh doanh</div><div class="mv"></div></div>
+      <div class="mt-row"><div class="mn">OS · Tự động hóa Vận hành + 16 Cố vấn AI</div><div class="mv">800tr – 1,2 tỷ</div></div>
+      <div class="mt-row"><div class="mn">ERP · Quản trị Dữ liệu Doanh nghiệp</div><div class="mv">1,0 – 1,5 tỷ</div></div>
+      <div class="mt-row"><div class="mn">CRM · Sale · Marketing tự động</div><div class="mv">600 – 900tr</div></div>
+      <div class="mt-row"><div class="mn">Web HCD + Lễ tân AI + CSKH + TMĐT vật liệu &amp; nội thất luxury</div><div class="mv">900tr – 1,3 tỷ</div></div>
+      <div class="mt-row"><div class="mn" style="color:var(--rose);font-weight:600">▸ Nhóm SaaS Thương mại hóa</div><div class="mv"></div></div>
+      <div class="mt-row"><div class="mn">Nền tảng SaaS + Cổng thanh toán + Quản trị người dùng đa-tenant</div><div class="mv">1,2 – 1,7 tỷ</div></div>
+      <div class="mt-row"><div class="mn">Hệ thống Affiliate &amp; Giới thiệu tự động</div><div class="mv">350 – 500tr</div></div>
+      <div class="mt-row total"><div class="mn">Tổng giá trị bóc tách riêng lẻ (9 model)</div><div class="mv grad-text">~8,3 – 12,3 tỷ</div></div>
     </div>
 
     <div class="tiers reveal">
-      <div class="tier">
-        <div class="tlabel">Gói Signature</div>
-        <div class="tname">Bảy hệ thống cốt lõi</div>
-        <div class="tprice grad-text">3,5 tỷ</div>
-        <div class="tunit">VNĐ · trọn bộ hệ sinh thái</div>
-        <div class="tdesc">Toàn bộ sáu tầng năng lực trên một lõi dữ liệu duy nhất — nền tảng hoàn chỉnh để vận hành và thương mại hóa.</div>
+      <div class="tier feat">
+        <div class="tlabel">Hợp đồng Trọn bộ · Đề xuất</div>
+        <div class="tname">Full 9 model — mức tốt nhất</div>
+        <div class="tprice grad-text">~4,3 tỷ</div>
+        <div class="tunit">= 35% tổng giá thị trường (12,3 tỷ) — mức THẤP NHẤT</div>
+        <div class="tdesc">Ký trọn bộ toàn hệ sinh thái trên một lõi dữ liệu duy nhất, hưởng mức 35% — thấp hơn hẳn build lẻ. HCD Holdings <b>cam kết đồng hành đến khi TỪNG model vận hành hiệu quả</b>, không bàn giao rồi rời đi.</div>
         <ul>
-          <li>Đầy đủ <b>6 tầng · 7 hệ thống</b></li>
-          <li>Một lõi dữ liệu hợp nhất</li>
-          <li>Đồng hành cố vấn <b>6 tháng</b></li>
+          <li>Đầy đủ <b>9 model · 3 nhóm</b> trên 1 lõi dữ liệu</li>
+          <li><b>Cam kết đồng hành</b> đến khi từng model vận hành hiệu quả</li>
+          <li>Tiết kiệm <b>~1,23 tỷ</b> so với build lẻ</li>
         </ul>
       </div>
-      <div class="tier feat">
-        <div class="tlabel">Gói Signature Plus · Đề xuất</div>
-        <div class="tname">Trọn bộ + Client Portal</div>
-        <div class="tprice grad-text">4,5 tỷ</div>
-        <div class="tunit">VNĐ · trải nghiệm đẳng cấp trọn vẹn</div>
-        <div class="tdesc">Toàn bộ gói Signature, bổ sung Cổng khách hàng VIP — nâng dịch vụ HCD lên chuẩn mực quốc tế.</div>
+      <div class="tier">
+        <div class="tlabel">Build lẻ theo ưu tiên</div>
+        <div class="tname">Chọn model nào, build model đó</div>
+        <div class="tprice grad-text">45%</div>
+        <div class="tunit">giá thị trường / mỗi model — tính tiền theo model khách chọn</div>
+        <div class="tdesc">Khách chọn model ưu tiên build trước (VD làm ERP + CRM trước), tính tiền đúng theo model đã chọn ở mức 45% giá thị trường. Linh hoạt theo ngân sách từng giai đoạn.</div>
         <ul>
-          <li>Tất cả tính năng gói <b>Signature</b></li>
-          <li><b>Cổng Khách hàng VIP</b>: theo dõi tiến độ, duyệt &amp; ký trực tuyến</li>
-          <li>Trải nghiệm khách hàng khác biệt</li>
-          <li>Đồng hành cố vấn <b>6 tháng</b></li>
+          <li>OS · Vận hành + 16 Cố vấn AI — <b>540tr</b></li>
+          <li>ERP — <b>675tr</b> · CRM · Sale · MKT — <b>405tr</b></li>
+          <li>Web HCD + Lễ tân + CSKH + TMĐT — <b>585tr</b></li>
+          <li>SaaS + Thanh toán + Quản trị người dùng — <b>765tr</b> · Affiliate — <b>225tr</b></li>
+          <li>Quy hoạch ĐT / Kiến trúc BIM / Nội thất 3D — <b>540 / 810 / 990tr</b></li>
         </ul>
       </div>
     </div>
 
+    <div class="impact-note reveal" style="margin-top:18px">// <b>Đây không phải một phần mềm — đây là một NỀN TẢNG CÔNG NGHỆ LỚN.</b> Tài sản số đẻ ra dòng tiền dài hạn: vận hành nội bộ hiệu quả (tiết kiệm chi phí) + thương mại hóa cho thuê SaaS + hoa hồng Affiliate + TMĐT vật liệu/nội thất. Dự kiến <b>18–24 tháng thu hồi vốn</b> qua tiết kiệm vận hành cộng doanh thu thương mại hóa — HCD Holdings đồng hành đến khi từng model vận hành hiệu quả.</div>
+
     <div class="market-table reveal" style="margin-top:24px">
-      <div class="mt-row head"><div class="mn">Chi phí vận hành hạ tầng — tạm tính / tháng</div><div class="mv">Biên độ ước tính</div></div>
+      <div class="mt-row head"><div class="mn">Chi phí hạ tầng — dùng bao nhiêu trả bấy nhiêu (không phải gói cố định)</div><div class="mv">Biên độ tham khảo/tháng</div></div>
       <div class="mt-row"><div class="mn">Hạ tầng ZeniCloud (server, storage, băng thông)</div><div class="mv">999.000đ – 15tr</div></div>
       <div class="mt-row"><div class="mn">GPU render &amp; xử lý mô hình BIM/3D (hạ tầng ZeniCloud)</div><div class="mv">8tr – 25tr</div></div>
       <div class="mt-row"><div class="mn">Token AI vận hành (16 cố vấn AI + Client Portal, nền Wits Pro 5)</div><div class="mv">6tr – 18tr</div></div>
-      <div class="mt-row total"><div class="mn">Tổng tạm tính / tháng</div><div class="mv grad-text">~15 – 45tr (180 – 540tr/năm)</div></div>
+      <div class="mt-row total"><div class="mn">Tổng tham khảo / tháng</div><div class="mv grad-text">~15 – 45tr</div></div>
     </div>
-    <div class="impact-note reveal" style="margin-top:16px">// Tạm tính theo mức sử dụng trung bình 8–15 dự án đồng thời; biến động theo khối lượng dự án và tần suất dùng AI thực tế. Báo giá chính thức sau khảo sát nhu cầu cụ thể.</div>
+    <div class="impact-note reveal" style="margin-top:16px">// Tính theo mức dùng thực tế hàng tháng (như hoá đơn điện/nước) — dùng ít trả ít, dùng nhiều trả nhiều, KHÔNG phải gói thuê bao cố định. Biên độ trên tham khảo theo mức 8–15 dự án đồng thời; hoá đơn thực tế xuất theo usage log mỗi tháng.</div>
 
     <div class="excl-box reveal">
-      <span class="ex-lbl">// CHƯA BAO GỒM TRONG GIÁ GÓI (tính riêng theo bảng trên + thực dùng):</span><br>
-      — Hạ tầng ZeniCloud, GPU render, token AI vận hành — xem bảng tạm tính ở trên<br>
-      — Phí vận hành &amp; bảo trì năm: ~15–20% giá trị hợp đồng
+      <span class="ex-lbl">// CHƯA BAO GỒM TRONG PHÍ QUẢN TRỊ VẬN HÀNH (tính riêng theo usage thực tế):</span><br>
+      — Hạ tầng ZeniCloud, GPU render, token AI vận hành — dùng bao nhiêu trả bấy nhiêu, xem bảng tạm tính ở trên
     </div>
   </div>
 </section>
@@ -567,14 +575,19 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
 
     <div class="addon-grid reveal" style="margin-top:20px">
       <div class="addon">
-        <h4>Vận hành sau bàn giao</h4>
-        <p>Quản trị vận hành: <b style="color:var(--text)">15.000.000đ/tháng</b> (ký theo năm). Bảo trì &amp; nâng cấp AI thông minh hơn theo thời gian: 5–10% giá trị hợp đồng/năm, tuỳ nhu cầu thực tế.</p>
+        <h4>Vận hành cơ bản</h4>
+        <p>Quản trị vận hành hạ tầng/mạng: <b style="color:var(--text)">15.000.000đ/tháng</b> (ký theo năm) — phí cố định, riêng biệt. Hạ tầng ZeniCloud/GPU render/token AI: <b style="color:var(--text)">dùng bao nhiêu trả bấy nhiêu</b> theo usage thực tế hàng tháng (xem bảng tạm tính hạ tầng). Không gồm CTO cố vấn R&amp;D nâng cấp nền tảng — phù hợp doanh nghiệp chưa cần nâng cấp tính năng thường xuyên, chủ động tự đề xuất khi cần.</p>
+      </div>
+      <div class="addon">
+        <h4>Vận hành + R&amp;D nâng cấp <span style="color:var(--rose);font-size:14px;font-weight:400">— Đề xuất</span></h4>
+        <p>Quản trị vận hành + đội ngũ CTO cố vấn R&amp;D sản phẩm, nền tảng luôn được nâng cấp thông minh hơn: <b style="color:var(--text)">45.000.000đ/tháng</b> (ký theo năm) — phí cố định, riêng biệt. Hạ tầng ZeniCloud/GPU/token AI vẫn <b style="color:var(--text)">dùng bao nhiêu trả bấy nhiêu</b> như gói cơ bản. Build tính năng mới ngoài phạm vi nâng cấp: báo giá theo độ phức tạp thực tế.</p>
       </div>
       <div class="addon">
         <h4>Bảo hành 6 tháng</h4>
         <p>Lỗi mã nguồn hoặc lỗi ngắt kết nối: <b style="color:var(--text)">khắc phục miễn phí</b>. Lỗi do phía chủ đầu tư thao tác gây hỏng: ngoài phạm vi bảo hành; nếu cần xây lại sẽ tính phí theo thực tế.</p>
       </div>
     </div>
+    <div class="impact-note reveal" style="margin-top:16px">// Chọn 1 trong 2 gói vận hành (Cơ bản hoặc + R&amp;D nâng cấp) khi ký hợp đồng vận hành theo năm — có thể nâng cấp lên gói R&amp;D bất kỳ lúc nào.</div>
 
     <div class="impact-note reveal" style="margin-top:16px">// Đây là phương án dự kiến. HCD Holdings sẽ deploy bản demo giải pháp để trải nghiệm, góp ý &amp; bổ sung tính năng mong muốn trước khi chốt phạm vi và báo giá chi tiết.</div>
   </div>
@@ -587,7 +600,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       <div class="ornament"><span class="ln"></span><span class="dm">✦</span></div>
       <div class="eyebrow">Bài toán build vs buy</div>
       <h2>Tự xây đội ngũ, <span class="g grad-text nowrap">hay đầu tư nền tảng đã sẵn sàng</span>?</h2>
-      <p>Nhiều doanh nghiệp cân nhắc tự xây đội ngũ công nghệ nội bộ để chủ động — nhưng đây là bài toán chi phí trên 2 tỷ đồng mỗi năm, đi kèm rủi ro cao, không phải lựa chọn rẻ hơn.</p>
+      <p>Nhiều doanh nghiệp cân nhắc tự xây đội ngũ công nghệ nội bộ để chủ động — nhưng đây là bài toán chi phí trên 2 tỷ đồng mỗi năm, đi kèm rủi ro cao. Thuê Zeni Digital quản trị vận hành + R&amp;D nâng cấp nền tảng chỉ 540 triệu/năm — chưa bằng 1/3 chi phí tự xây đội ngũ, lại không gánh rủi ro nhân sự nghỉ việc hay dự án đội vốn.</p>
     </div>
     <div class="impact-note reveal">// So sánh mang tính tham khảo dựa trên benchmark tuyển dụng &amp; triển khai phần mềm ngành xây dựng/BIM tại Việt Nam — không phải số liệu cam kết.</div>
     <div class="impact-grid reveal">
@@ -604,11 +617,12 @@ footer{border-top:1px solid var(--line);padding:38px 0;position:relative;z-index
       <div class="imp-col after">
         <div class="ih">Đầu tư HCD Ecosystem</div>
         <div class="isub">Sẵn sàng, đồng hành đến khi vận hành</div>
-        <div class="imp-row stack"><span class="il">Chi phí đầu tư</span><span class="iv">3,5–4,5 tỷ một lần + vận hành theo dùng</span></div>
+        <div class="imp-row stack"><span class="il">Chi phí đầu tư</span><span class="iv">Trọn bộ ~4,3 tỷ (35%) hoặc build lẻ theo model — + vận hành theo dùng</span></div>
+        <div class="imp-row stack"><span class="il">Quản trị vận hành + R&amp;D nâng cấp / năm</span><span class="iv grad-text">540tr (~27% so với &gt;2 tỷ tự xây đội ngũ)</span></div>
         <div class="imp-row stack"><span class="il">Thời gian thi công dự án</span><span class="iv">4–6 tháng</span></div>
         <div class="imp-row stack"><span class="il">Rủi ro nhân sự (đội ngũ Zeni Digital vận hành công nghệ)</span><span class="iv">Thấp</span></div>
         <div class="imp-row stack"><span class="il">Bảo trì, nâng cấp, R&amp;D liên tục</span><span class="iv">Zeni Digital đảm nhiệm</span></div>
-        <div class="imp-row stack"><span class="il">Cam kết đồng hành đến khi vận hành hiệu quả</span><span class="iv">6 tháng</span></div>
+        <div class="imp-row stack"><span class="il">Cam kết đồng hành đến khi vận hành hiệu quả</span><span class="iv grad-text">Đến khi từng model chạy hiệu quả</span></div>
       </div>
     </div>
   </div>
